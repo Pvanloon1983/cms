@@ -30,3 +30,14 @@
 			</div>
 		</div>
 @endif
+
+@if (session('resent'))
+		<div class="alert alert-success">
+			<div class="message">
+				Een nieuwe verificatielink is naar je e-mailadres gestuurd.
+			</div>
+			<div class="close">
+				<i class="fa-solid fa-xmark"></i>
+			</div>
+		</div>
+@endif

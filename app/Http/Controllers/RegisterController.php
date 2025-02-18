@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -34,17 +36,17 @@ class RegisterController extends Controller
             'password.min' => 'Het wachtwoord moet minimaal uit 8 tekens bestaan'
         ]);
 
-        User::create([
+        $user = User::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        // event(new Registered($user));
+        event(new Registered($user));
 
-        // Auth::login($user);
+        Auth::login($user);
 
-        return redirect(route('login', absolute: false))->with('success', 'U bent succesvol geregistreerd! U kunt nu inloggen.');
+        return redirect(route('dashboard'));
     }
 }

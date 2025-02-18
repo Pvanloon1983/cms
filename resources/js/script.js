@@ -1,3 +1,5 @@
+import './bootstrap';
+
 document.addEventListener("DOMContentLoaded", function() {
 
 	const menuToggle = document.querySelector('.menu-toggle');

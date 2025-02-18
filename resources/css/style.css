@@ -10,7 +10,7 @@
 
 * {
 	box-sizing: border-box;
-	font-family: "Lato", serif;
+	font-family: "Roboto", serif;
   font-weight: 400;
   font-style: normal;
 	color: var(--font-color);
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	border: 1px solid #333;
 	border-radius: 4px;
-	padding: 11px 15px;
+	padding: 10px 15px;
 	margin-left: 10px;
 	cursor: pointer;
 	font-size: 16px;
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 250px;
 	background-color: #F5F5F5;
 	height: 100vh;
-	z-index: 100; /* Make sure sidebar is above everything */
+	z-index: 100;
 	transition: right 0.3s ease-in-out;
 }
 
@@ -212,6 +212,20 @@ a {
 	margin-right: -5px;
 }
 
+.right.sidebar
+.logout-btn {
+	background-color: #333;
+	border: none;
+	color: #fff;
+	border: 1px solid #333;
+	border-radius: 4px;
+	padding: 10px 15px;
+	padding-top: 8px;
+	margin-left: 0px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
 /* Form page */
 .form-page {
 	height: calc(100vh - var(--header-height));
@@ -249,7 +263,6 @@ input {
 	padding: 5px;
 	border-radius: 4px;
 	font-size: 16px;
-	color: #333333d0;
 }
 
 .form-page 
@@ -261,7 +274,7 @@ input {
 .submit-button {
 	margin-top: 3px;
 	width:fit-content;
-	padding: 7px 12px 9px 12px;
+	padding: 10px 12px 9px 12px;
 	border: none;
 	border-radius: 4px;
 	background-color: var(--main-color);
@@ -280,12 +293,62 @@ input {
 	margin-bottom: 0;
 }
 
+.form-page
+.form-info {
+	margin-bottom: 5px;
+}
+
 .form
 .alert {
 	margin-top: 0px;
 	margin-bottom: 15px;
 	border-radius: 5px;
 	padding: 10px;
+}
+
+/* Verification page */
+.verification-page {
+	display: flex;
+	justify-content: center;
+}
+
+.verification-page
+.verification-container {
+	margin-top: 80px;
+}
+
+.verification-page
+.verification-container h2 {
+	margin-bottom: 15px;
+}
+
+.verification-page
+.verification-container p {
+	margin: 0px;
+	margin-bottom: 7px;
+}
+
+.verification-page
+.verification-container .submit-button {
+	margin-top: 12px;
+	width: -moz-fit-content;
+	width: fit-content;
+	padding: 10px 12px 9px 12px;
+	border: none;
+	border-radius: 4px;
+	background-color: var(--main-color);
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.verification-page
+.verification-container
+.extra-info {
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 1.3rem;
+	color: #333333c7;
 }
 
 @media screen and (max-width: 768px) {
@@ -298,6 +361,12 @@ input {
 
 	.header
 	.menu-item {
+		display: none;
+	}
+
+	.header
+	.navbar
+	.logout-btn {
 		display: none;
 	}
 

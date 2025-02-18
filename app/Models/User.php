@@ -51,19 +51,4 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPasswordC
         ];
     }
 
-    /**
-     * Stuur aangepaste e-mail voor wachtwoord reset
-     */
-    public function sendPasswordResetNotification($token)
-    {
-        $this->notify(new CustomResetPassword($token));
-    }
-
-    /**
-     * Stuur aangepaste e-mail voor e-mailverificatie
-     */
-    public function sendEmailVerificationNotification()
-    {
-        $this->notify(new CustomVerifyEmail());
-    }
 }
