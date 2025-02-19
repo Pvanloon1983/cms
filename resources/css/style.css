@@ -229,8 +229,43 @@ a {
 /* Form page */
 .form-page {
 	height: calc(100vh - var(--header-height));
+	background-color: #f5f7f9;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.form-page
+.form-box {
+	width: 100%;
+	max-width: 450px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 35px;
+	padding-right: 35px;
+	margin-top: 60px;
+	border: 1px solid #e6e8ea;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.form-page 
+.sub-text {
+	margin-top: -15px;
+	margin-bottom: 20px;
+}
+
+.form-page
+.btn-info-box {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -241,7 +276,11 @@ a {
 }
 
 .form-page h1 {
-	margin-top: 80px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-size: 28px;
+	font-weight: 600;
+	color: #333;
 }
 
 .form-page
@@ -259,15 +298,15 @@ a {
 .form-page
 .form-control
 input {
-	border: 1px solid #cfcfcf;
-	padding: 5px;
+	border: 1px solid #e3e3e3;
+	padding: 8px;
 	border-radius: 4px;
 	font-size: 16px;
 }
 
 .form-page 
 .form-control input:focus {
-	outline: 1px solid #c9c9c9;
+	outline: none;
 }
 
 .form-page
@@ -308,13 +347,29 @@ input {
 
 /* Verification page */
 .verification-page {
+	height: calc(100vh - var(--header-height));
+	background-color: #f5f7f9;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .verification-page
 .verification-container {
-	margin-top: 80px;
+	width: 100%;
+	max-width: 450px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 35px;
+	padding-right: 35px;
+	margin-top: 60px;
+	border: 1px solid #e6e8ea;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	background-color: #fff;
 }
 
 .verification-page
@@ -345,10 +400,9 @@ input {
 .verification-page
 .verification-container
 .extra-info {
-	margin-top: 10px;
+	margin-top: 15px;
 	font-size: 16px;
 	line-height: 1.3rem;
-	color: #333333c7;
 }
 
 @media screen and (max-width: 768px) {
@@ -370,4 +424,11 @@ input {
 		display: none;
 	}
 
+	.form-page
+	.form-box {
+		padding-top: 35px;
+		padding-bottom: 35px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }

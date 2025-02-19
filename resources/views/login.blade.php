@@ -1,5 +1,6 @@
 <x-main-layout>
-	<div class="container form-page">
+	<div class="form-page">
+		<div class="form-box">
 		<h1>Inloggen</h1>
 		<form class="form" action="{{ route('login') }}" method="POST">
 			<x-alert />
@@ -18,16 +19,17 @@
 					<p class="validation-error">{{ $message }}</p>
 				@enderror
 			</div>
-			<div class="form-control">
-				<button class="submit-button" type="submit">Inloggen</button>
-			</div>
-			<div class="form-info">
-				<a href="{{ route('register') }}">Registeren</a>
-			</div>
-			<div class="form-info">
-				<a href="{{ route('password.request') }}">Wachtwoord vergeten</a>
-			</div>
+				<div class="form-control">
+					<button class="submit-button" type="submit">Inloggen</button>
+				</div>
+				<div class="form-info">
+					<a href="{{ route('register') }}">Registeren</a>
+				</div>
+				<div class="form-info">
+					<a href="{{ route('password.request') }}">Wachtwoord vergeten</a>
+				</div>
 		</form>
+		</div>
 	</div>
 
 </x-main-layout>

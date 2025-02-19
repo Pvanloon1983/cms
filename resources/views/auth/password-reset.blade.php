@@ -1,7 +1,9 @@
 <x-main-layout>
-	<div class="container form-page">
+	<div class="form-page">
+		<div class="form-box">
 		<h1>Wachtwoord resetten</h1>
 			<form class="form" action="{{ route('password.update') }}" method="POST">
+				<p class="sub-text">Voer hieronder je nieuwe wachtwoord in. Zorg ervoor dat het minstens 8 tekens lang is.</p>
 			<x-alert />
 			@csrf
 
@@ -28,6 +30,7 @@
 				<button class="submit-button" type="submit">Wachtwoord resetten</button>
 			</div>
 		</form>
+		</div>
 	</div>
 
 </x-main-layout>
