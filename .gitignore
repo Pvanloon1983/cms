@@ -1,4 +1,7 @@
-/.phpunit.cache
+# Allow images inside public/storage/images!
+!public/storage/images
+!public/storage/images/*
+
 /node_modules
 /public/build
 /public/hot
