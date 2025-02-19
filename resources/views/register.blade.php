@@ -37,14 +37,12 @@
 					<label for="password_confirmation">Wachtwoord Bevestigen</label>
 					<input type="password" name="password_confirmation" id="password_confirmation">
 				</div>
-				<div class="btn-info-box">
 					<div class="form-control">
 						<button class="submit-button" type="submit">Registreren</button>
 					</div>
 					<div class="form-info">
-						<a href="{{ route('login') }}">Inloggen</a>
+						U heeft al een account? <a href="{{ route('login') }}">Inloggen</a>
 					</div>
-				</div>
 			</form>
 		</div>
 	</div>
