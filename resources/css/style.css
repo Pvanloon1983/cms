@@ -5,7 +5,8 @@
 	--main-color: #be3144; 
 	--secondary-color: #F5F5F5;
 	--font-color: #333;
-	--font-size: 16px;
+	--font-size: 17px;
+	--font-size-validation: 14px;
 }
 
 * {
@@ -113,8 +114,8 @@ h1, h2, h3, h4, h5, h6 {
  text-decoration: none;
  padding: 10px 15px;
  color: var(--font-color);
- font-size: 16px;
- font-weight: 400;
+ font-size: var(--font-size);
+ font-weight: 500;
  border-radius: 4px;
  transition: all 0.1s;
 }
@@ -123,6 +124,14 @@ h1, h2, h3, h4, h5, h6 {
 .header .nav a.active:hover {
 	color: #fff !important;
 	background-color: var(--main-color); 
+	font-weight: 400;
+}
+
+.header .nav .login a.active i,
+.header .nav .register a.active i,
+.header .nav .login a.active:hover i,
+.header .nav .register a.active:hover i{
+	color: #fff;
 }
 
 .header
@@ -152,7 +161,12 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px 15px;
 	margin-left: 10px;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: var(--font-size);
+}
+
+.navbar
+.logout-btn i {
+	color: #fff;
 }
 
 .sidebar {
@@ -165,10 +179,11 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	right: -250px;
 	width: 250px;
-	background-color: #F5F5F5;
+	background-color: #fff;
 	height: 100vh;
 	z-index: 100;
 	transition: right 0.3s ease-in-out;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .right.sidebar.toggle {
@@ -183,13 +198,15 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 25px;
+	font-size: var(--font-size);
 }
 
 .right.sidebar
 a {
 	text-decoration: none;
 	color: var(--font-color);
+	font-weight: 500;
 }
 
 .right.sidebar a.active,
@@ -223,18 +240,24 @@ a {
 	padding-top: 8px;
 	margin-left: 0px;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: var(--font-size);
+}
+
+.right.sidebar
+.logout-btn i {
+	color: #fff;
 }
 
 /* Form page */
 .form-page {
-	height: calc(100vh - var(--header-height));
+	min-height: calc(100vh - var(--header-height));
 	background-color: #f5f7f9;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-bottom: 60px;
 }
 
 .form-page
@@ -301,7 +324,7 @@ input {
 	border: 1px solid #e3e3e3;
 	padding: 8px;
 	border-radius: 4px;
-	font-size: 16px;
+	font-size: var(--font-size);
 }
 
 .form-page 
@@ -318,14 +341,14 @@ input {
 	border-radius: 4px;
 	background-color: var(--main-color);
 	color: #fff;
-	font-size: 16px;
+	font-size: var(--font-size);
 	cursor: pointer;
 }
 
 .form-page
 .validation-error {
 	color: #DC3545;
-	font-size: 14px;
+	font-size: var(--font-size-validation);
 	font-weight: 400;
 	margin-top: 4px;
 	display: block;
@@ -393,7 +416,7 @@ input {
 	border-radius: 4px;
 	background-color: var(--main-color);
 	color: #fff;
-	font-size: 16px;
+	font-size: var(--font-size);
 	cursor: pointer;
 }
 
@@ -401,7 +424,7 @@ input {
 .verification-container
 .extra-info {
 	margin-top: 15px;
-	font-size: 16px;
+	font-size: var(--font-size);
 	line-height: 1.3rem;
 }
 
